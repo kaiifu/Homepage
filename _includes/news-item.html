@@ -1,0 +1,12 @@
+{% assign item = include.item %}
+<article class="news-item">
+  <div class="news-item__meta">
+    <time datetime="{{ item.date }}">{{ item.date | date: "%Y.%m.%d" }}</time>
+    {% if item.tag %}<span>{{ item.tag }}</span>{% endif %}
+  </div>
+  <div>
+    <h3>{% if item.url %}<a href="{{ item.url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h3>
+    {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+  </div>
+</article>
+

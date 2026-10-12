@@ -1,0 +1,20 @@
+{% assign item = include.item %}
+<article class="output-item{% if item.image %} has-image{% endif %}{% if item.featured %} is-featured{% endif %}">
+  {% if item.image %}
+    <figure class="output-item__image">
+      <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | escape }}" loading="lazy">
+      {% if item.image_caption %}<figcaption>{{ item.image_caption }}</figcaption>{% endif %}
+    </figure>
+  {% endif %}
+  <div class="output-item__body">
+    <div class="output-item__meta">
+      <span>{{ item.year }}</span>
+      {% if item.featured %}<span>代表成果</span>{% endif %}
+    </div>
+    <h3>{% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h3>
+    <p class="output-item__authors">{{ item.authors }}</p>
+    <p class="output-item__venue">{{ item.venue }}</p>
+    {% if item.summary %}<p>{{ item.summary }}</p>{% endif %}
+  </div>
+</article>
+

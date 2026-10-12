@@ -1,0 +1,34 @@
+brand:
+  short_name: AIFu Lab
+  full_name_en: AI-Fused Electromagnetic Design Group
+  full_name_zh: AI 融合电磁设计课题组
+  tagline: 人工智能融合电磁设计
+  eyebrow: AI × ELECTROMAGNETICS
+
+leader:
+  name_en: KAI FU
+  name_zh: 傅凯
+  title: 副教授
+  role: 课题组负责人
+  photo: /images/photo1.jpg
+  photo_alt: KAI FU 参加 2019 国际无线会议时的照片
+  photo_position: 78% 50%
+  introduction: 我们研究如何让人工智能参与电磁器件的设计、优化与发现，当前聚焦 AI 辅助天线设计、参数优化和拓扑优化。
+
+# 以下单位信息待确认后填写；留空时模板不会显示。
+affiliation:
+institution:
+department:
+parent_lab:
+address:
+email:
+cv_pdf:
+
+links:
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?hl=zh-CN&authuser=1&user=nccjrrYAAAAJ
+  - label: GitHub
+    url: https://github.com/kaiifu
+  - label: LinkedIn
+    url: https://linkedin.com/in/kai-fu-64526a199
+

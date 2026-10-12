@@ -1,0 +1,86 @@
+journals:
+  - year: 2025
+    title: "NeuroStorm: An Adaptive Neural-Network-Driven Algorithm for Mixed-Variable Antenna Design"
+    authors: "Kai Fu et al."
+    venue: IEEE Transactions on Antennas and Propagation
+    featured: true
+  - year: 2025
+    title: "Machine-Learning-Assisted Swarm Intelligence Algorithm for Antenna Optimization With Mixed Continuous and Binary Variables"
+    authors: "Kai Fu et al."
+    venue: IEEE Transactions on Antennas and Propagation
+    featured: true
+  - year: 2022
+    title: "An Efficient Surrogate Assisted Particle Swarm Optimization for Antenna Synthesis"
+    authors: "Kai Fu et al."
+    venue: IEEE Transactions on Antennas and Propagation
+    featured: true
+  - year: 2021
+    title: "On the Applicability of Two-Bit Carbon Nanotube Through-Silicon Via for Power Distribution Networks in 3-D Integrated Circuits"
+    authors: "Q.-H. Hu, W.-S. Zhao, Kai Fu et al."
+    venue: IET Circuits, Devices & Systems
+  - year: 2020
+    title: "Electrical Modeling of Carbon Nanotube-Based Shielded Through-Silicon Vias for Three-Dimensional Integrated Circuits"
+    authors: "Q.-H. Hu, W.-S. Zhao, Kai Fu et al."
+    venue: "International Journal of Numerical Modelling: Electronic Networks, Devices and Fields"
+  - year: 2020
+    title: "Modeling of Carbon Nanotube-Based Differential Through-Silicon Vias in 3-D ICs"
+    authors: "Q.-H. Hu, W.-S. Zhao, Kai Fu et al."
+    venue: IEEE Transactions on Nanotechnology
+  - year: 2020
+    title: "Modeling and Characterization of Differential Multi-Bit Carbon Nanotube Through-Silicon Vias"
+    authors: "W.-S. Zhao, Q.-H. Hu, Kai Fu et al."
+    venue: IEEE Transactions on Components, Packaging and Manufacturing Technology
+  - year: 2019
+    title: "Analysis of Transmission Characteristics of Copper/Carbon Nanotube Composite Through-Silicon Via Interconnects"
+    authors: "Kai Fu et al."
+    venue: Chinese Journal of Electronics
+  - year: 2019
+    title: "Mini-Review: Modeling and Performance Analysis of Nanocarbon Interconnects"
+    authors: "W.-S. Zhao, Kai Fu et al."
+    venue: Applied Sciences
+  - year: 2019
+    title: "Modelling of Crosstalk in Differential TSVs for 3-D ICs"
+    authors: "J.-W. Pan, Kai Fu et al."
+    venue: IET Microwaves, Antennas & Propagation
+  - year: 2018
+    title: "Compact Passive Equalizer Design for Differential Channels in TSV-Based 3-D ICs"
+    authors: "Kai Fu et al."
+    venue: IEEE Access
+  - year: 2018
+    title: "Modeling and Performance Analysis of Shield Differential Annular Through-Silicon Via (SD-ATSV) for 3-D ICs"
+    authors: "Kai Fu et al."
+    venue: IEEE Access
+  - year: 2018
+    title: "A Passive Equalizer Design for Shielded Differential Through-Silicon Vias in 3-D IC"
+    authors: "Kai Fu et al."
+    venue: IEEE Microwave and Wireless Components Letters
+  - year: 2018
+    title: "Vertical Graphene Nanoribbon Interconnects at the End of the Roadmap"
+    authors: "W.-S. Zhao, Z.-H. Cheng, J. Wang, Kai Fu et al."
+    venue: IEEE Transactions on Electron Devices
+
+conferences:
+  - year: 2023
+    title: "A Machine Learning Enhanced Evolutionary Algorithm for Antenna Design"
+    authors: "Kai Fu et al."
+    venue: IEEE CAMA
+  - year: 2019
+    title: "A Passive Equalizer Design for On-Interposer Differential Interconnects in 2.5D/3D ICs"
+    authors: "W.-S. Zhao, Kai Fu et al."
+    venue: IEEE RFIT
+  - year: 2019
+    title: "An Ultracompact Butterworth Low-Pass Filter Based on Vertical Spiral TSV Inductor"
+    authors: "J.-W. Pan, Kai Fu et al."
+    venue: ICMMT
+  - year: 2017
+    title: "The Impact of Current Return Path on the Signal Propagation in the Through-Silicon Via Array"
+    authors: "Kai Fu et al."
+    venue: IEEE EDAPS
+  - year: 2017
+    title: "Modeling of Crosstalk Effects in Carbon Nanotube Based Differential Through-Silicon Via Array"
+    authors: "J.-W. Pan, Kai Fu et al."
+    venue: IEEE EDAPS
+
+projects: []
+student_outputs: []
+

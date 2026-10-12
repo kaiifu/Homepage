@@ -1,0 +1,30 @@
+{% assign profile = site.data.site %}
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="footer-brand">{{ profile.brand.short_name }}</p>
+      <p>{{ profile.brand.full_name_zh }}<br><span lang="en">{{ profile.brand.full_name_en }}</span></p>
+    </div>
+    <div>
+      <p class="footer-label">学术链接</p>
+      <ul class="footer-links">
+        {% for link in profile.links %}
+          <li><a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <p class="footer-label">联系</p>
+      {% if profile.email %}
+        <a href="mailto:{{ profile.email }}">{{ profile.email }}</a>
+      {% else %}
+        <a href="{{ '/contact/' | relative_url }}">查看公开联系方式</a>
+      {% endif %}
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span data-current-year>2026</span> KAI FU · AIFu Lab</span>
+    <span>Built with Jekyll for GitHub Pages</span>
+  </div>
+</footer>
+

@@ -1,0 +1,47 @@
+---
+title: 研究成果
+kicker: OUTPUTS
+subtitle: 论文、项目与学生成果按照类型和年份持续积累。
+permalink: /outputs/
+---
+{% assign outputs = site.data.outputs %}
+
+{% if outputs.journals and outputs.journals.size > 0 %}
+<section class="content-section">
+  <div class="section-intro">
+    <p class="eyebrow">JOURNAL ARTICLES</p>
+    <h2>期刊论文</h2>
+    <p>以下列表由原个人主页迁移；影响因子和分区会随年份变化，因此不在此固化展示。</p>
+  </div>
+  <div class="output-list">
+    {% for item in outputs.journals %}{% include output-item.html item=item %}{% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if outputs.conferences and outputs.conferences.size > 0 %}
+<section class="content-section content-section--soft">
+  <div class="section-intro">
+    <p class="eyebrow">CONFERENCES</p>
+    <h2>会议论文</h2>
+  </div>
+  <div class="output-list output-list--compact">
+    {% for item in outputs.conferences %}{% include output-item.html item=item %}{% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if outputs.projects and outputs.projects.size > 0 %}
+<section class="content-section">
+  <div class="section-intro"><h2>研究项目</h2></div>
+  <div class="output-list">{% for item in outputs.projects %}{% include output-item.html item=item %}{% endfor %}</div>
+</section>
+{% endif %}
+
+{% if outputs.student_outputs and outputs.student_outputs.size > 0 %}
+<section class="content-section">
+  <div class="section-intro"><h2>学生成果</h2></div>
+  <div class="output-list">{% for item in outputs.student_outputs %}{% include output-item.html item=item %}{% endfor %}</div>
+</section>
+{% endif %}
+
