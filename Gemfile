@@ -12,3 +12,9 @@ end
 
 gem 'kramdown'
 gem 'kramdown-parser-gfm'
+
+# Windows does not ship the IANA time-zone database used by TZInfo.
+gem 'tzinfo-data'
+
+# Silences Faraday's retry-middleware warning used by Jekyll integrations.
+gem 'faraday-retry'

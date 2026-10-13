@@ -4,6 +4,7 @@ _site/
 .jekyll-metadata
 .bundle/
 /vendor/
+Gemfile.lock
 node_modules/
 __pycache__/
 *.py[cod]
