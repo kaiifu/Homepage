@@ -21,6 +21,14 @@ PAGES = {
     "404.md": "/404.html",
 }
 
+EXPECTED_NAV = {
+    "/research/",
+    "/team/",
+    "/outputs/",
+    "/teaching/",
+    "/opportunities/",
+}
+
 
 def fail(message: str) -> None:
     print(f"ERROR: {message}")
@@ -57,9 +65,8 @@ def main() -> int:
 
     navigation = load_yaml(ROOT / "_data" / "navigation.yml")
     nav_urls = {item["url"] for item in navigation.get("main", [])}
-    expected_nav = set(PAGES.values()) - {"/", "/404.html"}
-    if nav_urls != expected_nav:
-        fail("navigation does not match the seven inner pages")
+    if nav_urls != EXPECTED_NAV:
+        fail("navigation does not match the five primary inner pages")
 
     for filename, permalink in PAGES.items():
         path = ROOT / "_pages" / filename
@@ -73,6 +80,19 @@ def main() -> int:
         fail("expected 14 migrated journal articles")
     if len(outputs.get("conferences", [])) != 5:
         fail("expected 5 migrated conference papers")
+
+    avatar = config.get("author", {}).get("avatar")
+    if avatar and not (ROOT / "images" / avatar).is_file():
+        fail(f"missing author avatar: images/{avatar}")
+
+    members = load_yaml(ROOT / "_data" / "members.yml")
+    people = [members.get("leader", {})]
+    for group in ("graduate_students", "undergraduate_students", "alumni"):
+        people.extend(members.get(group, []) or [])
+    for person in people:
+        photo = person.get("photo")
+        if photo and not (ROOT / photo.lstrip("/")).is_file():
+            fail(f"missing member photo: {photo}")
 
     required_theme_paths = (
         "_layouts/default.html",
@@ -95,7 +115,7 @@ def main() -> int:
         if "math.div" in path.read_text(encoding="utf-8"):
             fail(f"legacy GitHub Pages Sass cannot compile math.div: {path.relative_to(ROOT)}")
 
-    print("OK: Academic Pages source, 9 pages, 7 navigation items, 14 journals, 5 conferences")
+    print("OK: Academic Pages source, 9 pages, 5 navigation items, 14 journals, 5 conferences")
     return 0
 
 

@@ -1,7 +1,7 @@
 ---
 permalink: /contact/
 title: "联系我们"
-author_profile: true
+author_profile: false
 ---
 
 ## AIFu Lab

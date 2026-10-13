@@ -1,25 +1,26 @@
 locale: "zh-CN"
 site_theme: "default"
-title: "AIFu Lab"
+title: "AIFuEM Group"
 title_separator: "|"
 name: &name "KAI FU"
-description: &description "AIFu Lab｜AI 融合电磁设计课题组"
+description: &description "AIFuEM Lab｜AI 融合电磁设计课题组"
 url: "https://kaiifu.github.io"
 baseurl: "/Homepage"
 repository: "kaiifu/Homepage"
 
 author:
-  avatar: "photo1.jpg"
-  name: "KAI FU｜傅凯"
-  bio: "副教授，AIFu Lab 负责人。研究人工智能算法赋能的电磁器件设计。"
-  location:
-  employer:
+  avatar: "kai-fu-square.jpg"
+  name: "傅 楷｜KAI FU"
+  bio: "副研究员｜AIFu Group Leader"
+  university: "杭州电子科技大学"
+  employer: "电子信息学院"
+  location: "下沙校区4教中106"
   uri:
-  email:
+  email: "kaifu@hdu.edu.cn"
   googlescholar: "https://scholar.google.com/citations?hl=zh-CN&authuser=1&user=nccjrrYAAAAJ"
-  orcid:
-  researchgate:
-  github: "kaiifu"
+  orcid: "0000-0002-8842-4435"
+  researchgate: "Kai-Fu-7"
+  github: ""
   linkedin: "kai-fu-64526a199"
 
 publication_category:

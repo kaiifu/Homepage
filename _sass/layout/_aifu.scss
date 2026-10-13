@@ -18,6 +18,10 @@ body {
   margin-top: 2em;
 }
 
+.page__content .home-accent-heading {
+  color: #ff6666;
+}
+
 .research-list,
 .member-list,
 .news-list,
@@ -46,6 +50,23 @@ body {
   font-size: 0.9em;
 }
 
+.bibliography--numbered li {
+  display: grid;
+  grid-template-columns: 2.75rem minmax(0, 1fr);
+  gap: 0.35rem;
+  align-items: start;
+}
+
+.publication-number {
+  color: #999fff;
+  font-weight: 700;
+}
+
+.publication-entry,
+.publication-entry .publication-meta {
+  display: block;
+}
+
 .page__content .section-note {
   margin-top: -0.7em;
 }
@@ -55,11 +76,128 @@ body {
   color: var(--global-text-color-light);
 }
 
+.page__content .compact-links a,
+.page__content a.aifu-link {
+  color: #999fff;
+}
+
+.page__content .compact-links a:hover,
+.page__content .compact-links a:focus,
+.page__content a.aifu-link:hover,
+.page__content a.aifu-link:focus {
+  color: #7279e6;
+}
+
+/* Research directions use native details/summary cards so they remain
+   accessible and useful even when JavaScript is unavailable. */
+.research-accordion {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.research-card {
+  overflow: hidden;
+  border: 0;
+  border-radius: 24px;
+  background: rgba(153, 159, 255, 0.09);
+  box-shadow: 0 4px 14px rgba(92, 98, 190, 0.1);
+  transition: transform 0.2s ease, background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.research-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(92, 98, 190, 0.14);
+}
+
+.research-card[open] {
+  background: rgba(153, 159, 255, 0.14);
+}
+
+.research-card summary {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr) 2rem;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.research-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.research-card summary:focus-visible {
+  outline: 3px solid rgba(153, 159, 255, 0.65);
+  outline-offset: -3px;
+}
+
+.research-card__index {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  border-radius: 50%;
+  color: #7279e6;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.research-card__heading strong,
+.research-card__heading span {
+  display: block;
+}
+
+.research-card__heading strong {
+  color: var(--global-text-color);
+  font-size: 1.08rem;
+  line-height: 1.4;
+}
+
+.research-card__heading span {
+  margin-top: 0.15rem;
+  color: #999fff;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.research-card__toggle {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 50%;
+  color: #7279e6;
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 1.4rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.research-card[open] .research-card__toggle {
+  transform: rotate(45deg);
+}
+
+.page__content .research-card__body {
+  padding: 0 1.5rem 1.5rem 5.5rem;
+}
+
+.page__content .research-card__body p {
+  margin: 0;
+}
+
+.research-card--future {
+  background: rgba(153, 159, 255, 0.06);
+}
+
 /* People cards retain the Academic Pages visual language while giving each
    group member a clear, photo-led profile. */
 .people-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 1.25rem;
   margin: 1rem 0 1.5rem;
 }
@@ -104,28 +242,60 @@ body {
 }
 
 .person-card__body h3 {
-  margin: 0 0 0.25rem;
+  margin: 0 0 0.2rem;
   border-bottom: 0;
   font-family: $sans-serif-narrow;
+  font-size: 18px;
+  line-height: 1.35;
 }
 
 .person-card__body h3 span {
-  color: var(--global-text-color-light);
-  font-size: 0.82em;
+  display: block;
+  margin-top: 0.15rem;
+  // color: var(--global-text-color-light);
+  // color: #3366FF;
+  font-size: 16px;
   font-weight: 400;
+  line-height: 1.35;
 }
 
-.person-card__meta {
-  margin: 0 0 0.8rem;
-  color: var(--global-text-color-light);
-  font-size: 0.9em;
+.page__content .person-card__meta {
+  margin: 0;
+  // color: var(--global-text-color-light);
+  color: #999FFF;
+  font-size: 16px;
+  line-height: 1.35;
 }
 
-.person-card__detail,
-.person-card__link {
-  margin: 0.45rem 0 0;
-  font-size: 0.92em;
-  line-height: 1.65;
+.page__content .person-card__detail,
+.page__content .person-card__link {
+  margin: 0.25rem 0 0;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+/* Inner pages open with a clear section banner, inspired by the reference
+   site's colored title panel while staying within the AIFu color system. */
+#main.main--without-sidebar .page__inner-wrap > header {
+  margin: 0 0 2rem;
+  padding: 3rem 3.25rem;
+  overflow: hidden;
+  border: 0;
+  border-radius: 56px;
+  background: rgba(153, 159, 255, 0.12);
+  box-shadow: 0 5px 14px rgba(92, 98, 190, 0.12);
+  text-align: center;
+}
+
+#main.main--without-sidebar .page__inner-wrap > header .page__title {
+  margin: 0;
+  color: #999fff;
+  font-family: "幼圆", "YouYuan", "Yuanti SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: clamp(2.25rem, 4.5vw, 3.2rem);
+  font-weight: 900;
+  -webkit-text-stroke: 0.35px currentColor;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
 }
 
 /* Give the author profile more presence on desktop without affecting the
@@ -134,12 +304,22 @@ body {
   .sidebar {
     width: 22%;
     max-width: 285px;
+    position: sticky;
+    top: $masthead-height;
+    height: calc(100vh - #{$masthead-height});
+    padding-top: 1rem;
   }
 
   .page {
     width: 76%;
     padding-left: 2%;
     padding-right: 6%;
+  }
+
+  #main.main--without-sidebar .page {
+    width: 100%;
+    padding-left: 4%;
+    padding-right: 4%;
   }
 
   .author__avatar img {
@@ -160,6 +340,44 @@ body {
 @media (max-width: 600px) {
   .page__content {
     line-height: 1.7;
+  }
+
+  #main.main--without-sidebar .page__inner-wrap > header {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 1.25rem;
+    border-radius: 44px;
+  }
+
+  #main.main--without-sidebar .page__inner-wrap > header .page__title {
+    font-size: 2rem;
+  }
+
+  .research-card {
+    border-radius: 20px;
+  }
+
+  .research-card summary {
+    grid-template-columns: 2.5rem minmax(0, 1fr) 1.75rem;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .research-card__index {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .research-card__toggle {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .page__content .research-card__body {
+    padding: 0 1rem 1rem 4.25rem;
+  }
+
+  .people-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .person-card {

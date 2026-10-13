@@ -1,17 +1,75 @@
 leader:
-  name_en: KAI FU
-  name_zh: 傅凯
-  title: 副教授
+  name_en: 傅楷
+  name_zh: Kai Fu
+  title: 副研究员
   role: 课题组负责人
-  photo: /images/photo1.jpg
-  photo_alt: KAI FU 参加 2019 国际无线会议时的照片
-  photo_position: 78% 50%
+  photo: /images/kai-fu-ICCC1.jpg
+  photo_position: 42% 0%
   interests:
     - AI 辅助天线设计
     - 电磁器件参数优化
     - 电磁结构拓扑优化
 
-# 成员信息确认后直接向数组中添加条目，空数组不会在页面渲染。
-current_students: []
+graduate_students:
+  - name_en: 周菲
+    name_zh: Zhou Fei
+    title: 硕士
+    role: 2024级
+    interests:
+      - AI + Filters
+    photo: /images/members/student-zhoufei.jpg
+    photo_position: 50% 25%
+    # link: /team/student-name/
+
+  - name_en: 孙展
+    name_zh: Sun Zhan
+    title: 硕士
+    role: 2025级
+    interests:
+      - AI + FSS
+    photo: /images/members/student-sunzhan.jpg
+    photo_position: 0% 0%
+    # link: /team/student-name/
+
+  - name_en: 阮雄键
+    name_zh: Ruan Xiong-Jian
+    title: 硕士
+    role: 2026级
+    interests:
+      - LLM + EM
+    photo: /images/members/student-ruanxj.jpg
+    photo_position: 50% 50%
+    # link: /team/second-student/
+
+  - name_en: 董志权
+    name_zh: Dong Zhi-Quan
+    title: 硕士
+    role: 2026级
+    interests:
+      - AI + Antenna
+    photo: /images/members/student-dongzq.jpg
+    photo_position: 50% 50%
+    # link: /team/second-student/
+
+  - name_en: 余佳宝
+    name_zh: Yu Jia-Bao
+    title: 硕士
+    role: 2027级
+    interests:
+      - AI + EDA
+    photo: /images/members/student-yujb.jpg
+    photo_position: 50% 50%
+    # link: /team/second-student/
+
+undergraduate_students:
+  - name_en: 谢语煊
+    name_zh: Xie Yu-Xuan
+    title: 电子科学与技术
+    role: 2025级
+    interests:
+      - AI Agents
+    photo: /images/members/student-xieyx.jpg
+    photo_position: 50% 50%
+    # link: /team/second-student/
 alumni: []
 

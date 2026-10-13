@@ -9,7 +9,5 @@ main:
     url: /teaching/
   - title: "招生与合作"
     url: /opportunities/
-  - title: "联系我们"
-    url: /contact/
-  - title: "个人简历"
-    url: /cv/
+  # - title: "个人简历"
+  #   url: /cv/

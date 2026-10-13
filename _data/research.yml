@@ -2,11 +2,8 @@ current:
   - title: AI 辅助天线设计
     label_en: AI-Assisted Antenna Design
     visual: antenna
-    description: 研究机器学习、进化计算与代理模型如何提升天线设计的搜索效率、混合变量处理能力和工程可用性。
-  - title: 电磁器件参数优化
-    label_en: Parametric Optimization
-    visual: parameter
-    description: 面向高维、昂贵仿真和多目标约束问题，探索数据驱动的快速建模与智能优化方法。
+    description: 研究机器学习、进化计算与代理模型如何提升天线设计效率。
+
   - title: 电磁结构拓扑优化
     label_en: Topology Optimization
     visual: topology
@@ -14,9 +11,12 @@ current:
 
 future:
   - title: AI + 滤波器与功率放大器
-    description: 将已有智能优化方法逐步扩展至更多射频与微波器件。
+    label_en: AI-Enabled Filters and Power Amplifiers
+    description: 将智能设计方法逐步扩展至更多射频与微波器件。
   - title: 面向电磁设计的智能 EDA
+    label_en: Intelligent EDA for Electromagnetic Design
     description: 研究贯穿建模、搜索、仿真与验证流程的自动化设计方法。
   - title: 电磁与 EDA 领域大语言模型
+    label_en: LLMs for Electromagnetics and EDA
     description: 探索领域知识增强、设计助手与智能代理在电磁设计流程中的应用。
 
