@@ -128,6 +128,35 @@ body {
   line-height: 1.65;
 }
 
+/* Give the author profile more presence on desktop without affecting the
+   compact mobile/tablet header. */
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    width: 22%;
+    max-width: 285px;
+  }
+
+  .page {
+    width: 76%;
+    padding-left: 2%;
+    padding-right: 6%;
+  }
+
+  .author__avatar img {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .sidebar .author__name {
+    font-size: 1.1em;
+  }
+
+  .sidebar .author__bio {
+    font-size: 0.82em;
+    line-height: 1.6;
+  }
+}
+
 @media (max-width: 600px) {
   .page__content {
     line-height: 1.7;
