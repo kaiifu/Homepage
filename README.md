@@ -16,8 +16,8 @@ AIFu Lab（AI 融合电磁设计课题组）主页，基于开源的
 
 ## GitHub Pages
 
-推送到 `main` 后，由 `.github/workflows/jekyll.yml` 构建并部署。
-请在仓库 **Settings → Pages → Source** 中选择 **GitHub Actions**。
+推送到 `main` 后，由仓库现有的 GitHub Pages 分支发布流程自动构建并部署。
+主题中的 Sass 已保持与该构建环境兼容。
 
 ## 学校主页上传包
 

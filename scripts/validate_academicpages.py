@@ -91,6 +91,10 @@ def main() -> int:
         if not (ROOT / relative).is_file():
             fail(f"missing Academic Pages file: {relative}")
 
+    for path in (ROOT / "_sass").rglob("*.scss"):
+        if "math.div" in path.read_text(encoding="utf-8"):
+            fail(f"legacy GitHub Pages Sass cannot compile math.div: {path.relative_to(ROOT)}")
+
     print("OK: Academic Pages source, 9 pages, 7 navigation items, 14 journals, 5 conferences")
     return 0
 
