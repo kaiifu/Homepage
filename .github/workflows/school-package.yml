@@ -1,0 +1,33 @@
+name: Build school upload ZIP
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+      - name: Validate source
+        run: python scripts/validate_academicpages.py
+      - name: Build portable site
+        run: bundle exec jekyll build --strict_front_matter --config _config.yml,_config_school.yml --destination _site-school
+        env:
+          JEKYLL_ENV: production
+      - name: Create upload ZIP
+        run: python scripts/make_school_zip.py
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AIFuLab-school-upload
+          path: AIFuLab-school-upload.zip
+          if-no-files-found: error

@@ -1,3 +1,19 @@
-.superpowers/
-.preview/
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+node_modules/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
 
+# Local migration and preview artifacts
+.template-academicpages/
+.school-package/
+.preview/
+.superpowers/
+academicpages.github.io-master.zip
+AIFuLab-school-upload.zip
