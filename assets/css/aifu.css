@@ -353,7 +353,6 @@ h3 { font-weight: 750; }
 .member-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .member-grid--leader { grid-template-columns: minmax(0, 720px); }
 .member-card { display: grid; grid-template-rows: 260px auto; overflow: hidden; border: 1px solid var(--line); background: #fff; box-shadow: var(--shadow-small); }
-.member-card--text { grid-template-rows: auto; }
 .member-grid--leader .member-card { grid-template-columns: 280px 1fr; grid-template-rows: none; }
 .member-card__photo { overflow: hidden; background: #d6dede; }
 .member-card__photo img { width: 100%; height: 100%; object-fit: cover; }

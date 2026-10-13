@@ -1,3 +1,4 @@
+<<<<<<< ours
 # AIFu Lab Homepage
 
 AIFu Lab（AI-Fused Electromagnetic Design Group）课题组主页，使用 Jekyll 构建并部署在 GitHub Pages。
@@ -50,3 +51,6 @@ python scripts/validate_site.py
 ## 旧版资源
 
 旧版 HTML5 UP 样式、脚本和相册图片暂时保留在仓库中，但新版页面不再引用它们。确认新版稳定后，可另行归档清理。
+=======
+# Homepage
+>>>>>>> theirs

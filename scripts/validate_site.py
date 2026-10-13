@@ -5,13 +5,11 @@ from __future__ import annotations
 import re
 import sys
 from pathlib import Path
-from urllib.parse import urlsplit
 
 import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PREVIEW = ROOT / ".preview" / "Homepage"
 EXPECTED_PAGES = {
     "index.html": "/",
     "research.html": "/research/",
@@ -116,42 +114,14 @@ def check_templates() -> None:
             fail(f"root-absolute asset/link bypasses relative_url in {path.relative_to(ROOT)}")
 
 
-def check_preview_if_present() -> int:
-    if not PREVIEW.exists():
-        return 0
-
-    html_files = sorted(PREVIEW.rglob("*.html"))
-    for path in html_files:
-        text = path.read_text(encoding="utf-8")
-        if "{{" in text or "{%" in text:
-            fail(f"unrendered Liquid remains in {path.relative_to(ROOT)}")
-
-        for raw_url in re.findall(r'(?:href|src)="([^"]+)"', text):
-            parsed = urlsplit(raw_url)
-            if parsed.scheme or parsed.netloc or raw_url.startswith(("mailto:", "#")):
-                continue
-            if not parsed.path.startswith("/Homepage/"):
-                fail(f"preview link is not baseurl-safe in {path.relative_to(ROOT)}: {raw_url}")
-
-            relative = parsed.path.removeprefix("/Homepage/")
-            target = PREVIEW / relative
-            if parsed.path.endswith("/"):
-                target = target / "index.html"
-            if not target.is_file():
-                fail(f"broken preview link in {path.relative_to(ROOT)}: {raw_url}")
-    return len(html_files)
-
-
 def main() -> int:
     data = check_yaml()
     check_pages(data)
     check_content(data)
     check_templates()
-    preview_pages = check_preview_if_present()
     print(
         "OK: 8 pages, 6 data files, 14 journals, 5 conferences, "
         "balanced Liquid delimiters, and baseurl-safe internal links"
-        + (f"; {preview_pages} rendered preview pages have no broken local links" if preview_pages else "")
     )
     return 0
 

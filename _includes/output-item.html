@@ -1,5 +1,5 @@
 {% assign item = include.item %}
-<article class="output-item{% if item.image %} has-image{% endif %}{% if item.featured %} is-featured{% endif %}">
+<article class="output-item{% if item.featured %} is-featured{% endif %}">
   {% if item.image %}
     <figure class="output-item__image">
       <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | escape }}" loading="lazy">

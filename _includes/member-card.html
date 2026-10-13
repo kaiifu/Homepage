@@ -1,5 +1,5 @@
 {% assign person = include.person %}
-<article class="member-card{% unless person.photo %} member-card--text{% endunless %}">
+<article class="member-card">
   {% if person.photo %}
     <div class="member-card__photo">
       <img src="{{ person.photo | relative_url }}" alt="{{ person.photo_alt | escape }}" loading="lazy" style="object-position: {{ person.photo_position | default: '50% 50%' }};">
