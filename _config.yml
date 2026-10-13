@@ -1,22 +1,119 @@
-title: AIFu Lab
-description: 人工智能融合电磁设计课题组｜AI-Fused Electromagnetic Design Group
-url: https://kaiifu.github.io
-baseurl: /Homepage
-lang: zh-CN
-timezone: Asia/Shanghai
-permalink: pretty
+locale: "zh-CN"
+site_theme: "default"
+title: "AIFu Lab"
+title_separator: "|"
+name: &name "KAI FU"
+description: &description "AIFu Lab｜AI 融合电磁设计课题组"
+url: "https://kaiifu.github.io"
+baseurl: "/Homepage"
+repository: "kaiifu/Homepage"
+
+author:
+  avatar: "photo1.jpg"
+  name: "KAI FU｜傅凯"
+  bio: "副教授，AIFu Lab 负责人。研究人工智能算法赋能的电磁器件设计。"
+  location:
+  employer:
+  uri:
+  email:
+  googlescholar: "https://scholar.google.com/citations?hl=zh-CN&authuser=1&user=nccjrrYAAAAJ"
+  orcid:
+  researchgate:
+  github: "kaiifu"
+  linkedin: "kai-fu-64526a199"
+
+publication_category:
+  manuscripts:
+    title: "期刊论文"
+  conferences:
+    title: "会议论文"
+
+breadcrumbs: false
+words_per_minute: 160
+future: true
+read_more: "disabled"
+comments:
+  provider:
+atom_feed:
+  hide: true
+analytics:
+  provider: "false"
+social:
+  type: "Person"
+  name: "KAI FU"
+  links:
+    - "https://scholar.google.com/citations?hl=zh-CN&authuser=1&user=nccjrrYAAAAJ"
+    - "https://github.com/kaiifu"
+    - "https://linkedin.com/in/kai-fu-64526a199"
+
+include:
+  - _pages
+  - files
+exclude:
+  - ".template-academicpages"
+  - ".school-package"
+  - ".superpowers"
+  - ".preview"
+  - "academicpages.github.io-master.zip"
+  - "AIFuLab-school-upload.zip"
+  - "docs"
+  - "node_modules"
+  - "vendor"
+  - "README.md"
+  - "scripts"
+  - "Gemfile"
+  - "Gemfile.lock"
+keep_files:
+  - .git
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
 
 defaults:
   - scope:
       path: ""
+      type: pages
     values:
-      layout: page
+      layout: single
+      author_profile: true
 
-exclude:
-  - docs
-  - README.md
-  - README.txt
-  - index-demo.html
-  - assets/sass
-  - .superpowers
+sass:
+  sass_dir: _sass
+  style: compressed
 
+permalink: /:categories/:title/
+timezone: Asia/Shanghai
+
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jemoji
+
+whitelist:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jemoji
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development

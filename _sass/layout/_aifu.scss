@@ -1,0 +1,58 @@
+/* Minimal additions for Chinese academic content. The Academic Pages layout,
+   spacing, and visual language remain unchanged. */
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+}
+
+.page__content {
+  line-height: 1.8;
+}
+
+.page__content h2 {
+  margin-top: 2em;
+}
+
+.research-list,
+.member-list,
+.news-list,
+.bibliography {
+  padding-left: 0;
+  list-style: none;
+}
+
+.research-list li,
+.member-list li,
+.news-list li,
+.bibliography li {
+  margin-bottom: 1.15em;
+}
+
+.research-list strong,
+.member-list strong,
+.bibliography strong {
+  display: block;
+}
+
+.publication-meta,
+.news-date,
+.section-note {
+  color: var(--global-text-color-light);
+  font-size: 0.9em;
+}
+
+.page__content .section-note {
+  margin-top: -0.7em;
+}
+
+.compact-links a + a::before {
+  content: " · ";
+  color: var(--global-text-color-light);
+}
+
+@media (max-width: 600px) {
+  .page__content {
+    line-height: 1.7;
+  }
+}

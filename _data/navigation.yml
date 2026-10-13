@@ -1,17 +1,15 @@
-- label: 首页
-  url: /
-- label: 研究方向
-  url: /research/
-- label: 团队成员
-  url: /team/
-- label: 研究成果
-  url: /outputs/
-- label: 教学与毕业设计
-  url: /teaching/
-- label: 招生与合作
-  url: /opportunities/
-- label: 联系我们
-  url: /contact/
-- label: 个人简历
-  url: /cv/
-
+main:
+  - title: "研究方向"
+    url: /research/
+  - title: "团队成员"
+    url: /team/
+  - title: "研究成果"
+    url: /outputs/
+  - title: "教学与毕业设计"
+    url: /teaching/
+  - title: "招生与合作"
+    url: /opportunities/
+  - title: "联系我们"
+    url: /contact/
+  - title: "个人简历"
+    url: /cv/
