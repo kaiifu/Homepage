@@ -1,0 +1,24 @@
+{% assign profile = site.data.site %}
+<header class="site-header">
+  <div class="masthead">
+    <div class="container masthead__inner">
+      <a class="brand-mark" href="{{ '/' | relative_url }}" aria-label="返回 AIFu Lab 首页">
+        <span class="field-visual" aria-hidden="true">
+          <i></i><i></i><i></i><i></i>
+        </span>
+      </a>
+      <div class="brand-copy">
+        <p class="brand-eyebrow">{{ profile.brand.eyebrow }}</p>
+        <a class="brand-title" href="{{ '/' | relative_url }}">{{ profile.brand.short_name }}</a>
+        <p class="brand-subtitle">
+          {{ profile.brand.full_name_zh }}
+          <span aria-hidden="true">·</span>
+          <span lang="en">{{ profile.brand.full_name_en }}</span>
+        </p>
+        {% if profile.affiliation %}<p class="brand-affiliation">{{ profile.affiliation }}</p>{% endif %}
+      </div>
+    </div>
+  </div>
+  {% include navigation.html %}
+</header>
+

@@ -1,0 +1,42 @@
+---
+title: 研究方向
+kicker: RESEARCH
+subtitle: 从 AI 辅助天线设计出发，逐步走向面向电磁工程的智能设计自动化。
+permalink: /research/
+---
+<section class="content-section">
+  <div class="section-intro">
+    <p class="eyebrow">CURRENT FOCUS</p>
+    <h2>当前研究重点</h2>
+    <p>现阶段工作围绕天线与电磁器件设计中的昂贵仿真、混合变量、高维搜索和结构生成问题展开。</p>
+  </div>
+  <div class="research-grid">
+    {% for topic in site.data.research.current %}
+      <article class="research-card">
+        <div class="research-visual research-visual--{{ topic.visual }}" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="research-card__body">
+          <p class="research-card__label" lang="en">{{ topic.label_en }}</p>
+          <h3>{{ topic.title }}</h3>
+          <p>{{ topic.description }}</p>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="content-section future-section">
+  <div class="section-intro">
+    <p class="eyebrow">EMERGING DIRECTIONS</p>
+    <h2>未来拓展</h2>
+    <p>以下方向处于计划拓展或持续探索阶段，与当前已经形成的研究重点明确区分。</p>
+  </div>
+  <ol class="future-list">
+    {% for topic in site.data.research.future %}
+      <li>
+        <span class="future-list__index">0{{ forloop.index }}</span>
+        <div><h3>{{ topic.title }}</h3><p>{{ topic.description }}</p></div>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
+

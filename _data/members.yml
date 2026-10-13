@@ -1,0 +1,17 @@
+leader:
+  name_en: KAI FU
+  name_zh: 傅凯
+  title: 副教授
+  role: 课题组负责人
+  photo: /images/photo1.jpg
+  photo_alt: KAI FU 参加 2019 国际无线会议时的照片
+  photo_position: 78% 50%
+  interests:
+    - AI 辅助天线设计
+    - 电磁器件参数优化
+    - 电磁结构拓扑优化
+
+# 成员信息确认后直接向数组中添加条目，空数组不会在页面渲染。
+current_students: []
+alumni: []
+

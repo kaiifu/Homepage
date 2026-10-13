@@ -1,0 +1,22 @@
+title: AIFu Lab
+description: 人工智能融合电磁设计课题组｜AI-Fused Electromagnetic Design Group
+url: https://kaiifu.github.io
+baseurl: /Homepage
+lang: zh-CN
+timezone: Asia/Shanghai
+permalink: pretty
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+exclude:
+  - docs
+  - README.md
+  - README.txt
+  - index-demo.html
+  - assets/sass
+  - .superpowers
+

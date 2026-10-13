@@ -1,0 +1,20 @@
+{% assign person = include.person %}
+<article class="member-card">
+  {% if person.photo %}
+    <div class="member-card__photo">
+      <img src="{{ person.photo | relative_url }}" alt="{{ person.photo_alt | escape }}" loading="lazy" style="object-position: {{ person.photo_position | default: '50% 50%' }};">
+    </div>
+  {% endif %}
+  <div class="member-card__body">
+    <p class="member-card__role">{{ person.role | default: person.title }}</p>
+    <h3>{{ person.name_en }}{% if person.name_zh %} <span>{{ person.name_zh }}</span>{% endif %}</h3>
+    {% if person.title %}<p class="member-card__title">{{ person.title }}</p>{% endif %}
+    {% if person.interests and person.interests.size > 0 %}
+      <ul class="tag-list" aria-label="研究方向">
+        {% for interest in person.interests %}<li>{{ interest }}</li>{% endfor %}
+      </ul>
+    {% endif %}
+    {% if person.link %}<a class="text-link" href="{{ person.link }}">个人主页 <span aria-hidden="true">→</span></a>{% endif %}
+  </div>
+</article>
+

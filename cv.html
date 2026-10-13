@@ -1,0 +1,43 @@
+---
+title: 个人简历
+kicker: CURRICULUM VITAE
+subtitle: KAI FU · 傅凯
+permalink: /cv/
+---
+{% assign profile = site.data.site %}
+<section class="cv-header">
+  <div>
+    <p class="eyebrow">ACADEMIC PROFILE</p>
+    <h2>{{ profile.leader.name_en }} <span>{{ profile.leader.name_zh }}</span></h2>
+    <p>{{ profile.leader.title }} · {{ profile.leader.role }}</p>
+  </div>
+  {% if profile.cv_pdf %}<a class="button button--primary" href="{{ profile.cv_pdf | relative_url }}">下载 PDF 简历</a>{% endif %}
+</section>
+
+<section class="content-section cv-grid">
+  <div>
+    <h2>研究兴趣</h2>
+    <ul class="plain-list">
+      <li>AI 辅助天线与电磁器件设计</li>
+      <li>代理模型与进化优化</li>
+      <li>电磁结构拓扑优化</li>
+      <li>智能 EDA 与领域大语言模型</li>
+    </ul>
+  </div>
+  <div>
+    <h2>教育与研究经历</h2>
+    <ol class="timeline">
+      <li><span>现在</span><div><h3>副教授</h3><p>负责 AIFu Lab，开展人工智能融合电磁设计研究。</p></div></li>
+      <li><span>博士阶段</span><div><h3>香港城市大学</h3><p>在太赫兹及毫米波国家重点实验室开展 AI 辅助天线、超表面与超材料设计研究。</p></div></li>
+      <li><span>2020 起</span><div><h3>南方科技大学研究经历</h3><p>围绕机器学习辅助进化算法与天线设计优化开展研究。</p></div></li>
+      <li><span>2019</span><div><h3>伯明翰大学访问研究</h3><p>参与射频声学滤波器综合与设计研究。</p></div></li>
+      <li><span>2017–2020</span><div><h3>杭州电子科技大学</h3><p>获得工学学士和工学硕士学位，研究三维集成电路互连与神经网络辅助 EDA。</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="callout callout--links">
+  <div><p class="eyebrow">RESEARCH OUTPUTS</p><h2>完整成果列表</h2></div>
+  <a class="button button--ghost" href="{{ '/outputs/' | relative_url }}">查看论文与成果</a>
+</section>
+
