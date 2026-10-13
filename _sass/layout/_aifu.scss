@@ -51,8 +51,90 @@ html {
   color: var(--global-text-color-light);
 }
 
+/* People cards retain the Academic Pages visual language while giving each
+   group member a clear, photo-led profile. */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.people-grid--leader {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.person-card {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  padding: 1rem;
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+  background: var(--global-bg-color);
+}
+
+.person-card__photo {
+  width: 118px;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: $border-radius;
+  background: var(--global-border-color);
+}
+
+.person-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.person-card__placeholder {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  color: var(--global-text-color-light);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.person-card__body h3 {
+  margin: 0 0 0.25rem;
+  border-bottom: 0;
+  font-family: $sans-serif-narrow;
+}
+
+.person-card__body h3 span {
+  color: var(--global-text-color-light);
+  font-size: 0.82em;
+  font-weight: 400;
+}
+
+.person-card__meta {
+  margin: 0 0 0.8rem;
+  color: var(--global-text-color-light);
+  font-size: 0.9em;
+}
+
+.person-card__detail,
+.person-card__link {
+  margin: 0.45rem 0 0;
+  font-size: 0.92em;
+  line-height: 1.65;
+}
+
 @media (max-width: 600px) {
   .page__content {
     line-height: 1.7;
+  }
+
+  .person-card {
+    grid-template-columns: 96px minmax(0, 1fr);
+    padding: 0.8rem;
+  }
+
+  .person-card__photo {
+    width: 96px;
   }
 }

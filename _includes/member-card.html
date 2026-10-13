@@ -1,0 +1,27 @@
+{% assign person = include.person %}
+{% assign display_name = person.name_en | default: person.name %}
+<article class="person-card">
+  <div class="person-card__photo">
+    {% if person.photo %}
+      <img src="{{ person.photo | relative_url }}"
+           alt="{{ person.photo_alt | default: display_name | escape }}"
+           loading="lazy"
+           style="object-position: {{ person.photo_position | default: '50% 50%' }};">
+    {% else %}
+      <span class="person-card__placeholder" aria-hidden="true">{{ display_name | slice: 0 }}</span>
+    {% endif %}
+  </div>
+  <div class="person-card__body">
+    <h3>{{ display_name }}{% if person.name_zh %} <span lang="zh-CN">{{ person.name_zh }}</span>{% endif %}</h3>
+    {% if person.title or person.role %}
+      <p class="person-card__meta">{% if person.title %}{{ person.title }}{% endif %}{% if person.title and person.role %} · {% endif %}{% if person.role %}{{ person.role }}{% endif %}</p>
+    {% endif %}
+    {% if person.interests and person.interests != empty %}
+      <p class="person-card__detail"><strong>研究方向：</strong>{{ person.interests | join: '、' }}</p>
+    {% elsif person.research %}
+      <p class="person-card__detail"><strong>研究方向：</strong>{{ person.research }}</p>
+    {% endif %}
+    {% if person.destination %}<p class="person-card__detail"><strong>毕业去向：</strong>{{ person.destination }}</p>{% endif %}
+    {% if person.link %}<p class="person-card__link"><a href="{{ person.link | relative_url }}">个人主页</a></p>{% endif %}
+  </div>
+</article>
